@@ -46,6 +46,11 @@ $ClientSecurity = Get-WmiObject -Class Win32_Product | Where-Object{$_.Name -eq 
 }
 
     function InstallAEM($token) {
+        If (Test-Path -Path $workdir -PathType Container)
+            { Write-Host "$workdir already exists" -ForegroundColor Red}
+        ELSE
+            { New-Item -Path $workdir  -ItemType directory }
+
         $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
         $headers.Add("Authorization", "Bearer $token")
 
