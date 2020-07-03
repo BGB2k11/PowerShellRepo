@@ -20,8 +20,8 @@ $ClientSecurity = Get-WmiObject -Class Win32_Product | Where-Object{$_.Name -eq 
  function New-AemApiAccessToken
     {
 	    $apiUrl         	=	'https://pinotage-api.centrastage.net'
-	    $apiKey         	=	'APIKEY'
-	    $apiSecretKey  	    =	'APISECRET'
+	    $apiKey         	=	'A69PGAJCNEMQBPISAF8EP4FJKR6S8CA2'
+	    $apiSecretKey  	    =	'3AFG9HOE6UA3OM88BCUGE9G8LOI79G6B'
 
 	# Specify security protocols
 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]'Ssl3,Tls,Tls11,Tls12'
